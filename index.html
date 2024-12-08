@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: linear-gradient(-45deg, #000000, #030b3e, #081b29, #f4f3f9);
+            background-size: 400% 400%;
+            animation: animate 15s ease infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: aliceblue;
+            font-size: 18px;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding-top: 60px; /* Space from top */
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: colorChange 3s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: rgb(165, 95, 48);
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        span {
+            color: rgb(57, 146, 190);
+        }
+
+        p {
+            width: 500px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px auto;
+            font-weight: 400;
+        }
+
+        .instruction {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(57, 146, 190);
+            margin-top: 20px;
+        }
+
+        .homepage {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow elements to wrap */
+            justify-content: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 280px;
+            height: 280px;
+            border-color: aqua;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover img {
+            transform: scale(1.3);
+            box-shadow: 0 0 15px 5px skyblue;
+        }
+
+        .user1, .user2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .user1 p, .user2 p {
+            font-size: 30px;
+            animation: textChange 5s infinite alternate;
+        }
+
+        @keyframes textChange {
+            0% {
+                color: rgb(165, 95, 48);
+            }
+            100% {
+                color: rgb(253, 253, 253);
+            }
+        }
+
+        /* Responsive Design for Tablets */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .homepage {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .user1, .user2 {
+                font-size: 24px;
+            }
+
+            .user1 p, .user2 p {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+                width: 80%;
+            }
+
+            .instruction {
+                font-size: 18px;
+            }
+
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .homepage {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .user1, .user2 {
+                font-size: 22px;
+            }
+
+            .user1 p, .user2 p {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+                width: 90%;
+            }
+
+            .instruction {
+                font-size: 16px;
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Welcome to our <span>Web Page</span></h1>
+<p>We’re so happy you’re here! This page is where we share our passions, projects, and the things that inspire us.
+     Whether you’re interested in our individual journeys or the work we do together, we hope you find something that 
+     sparks your curiosity. Feel free to explore and connect with us anytime!</p>
+
+<p class="instruction">Click the Profile to Direct the User Account</p>
+
+<div class="homepage">
+    <div class="user1">
+        <a href="User1.html"><img src="home-pic.webp" alt="User 1"></a>
+        <p>John Harold Mejia</p>
+    </div>
+    <div class="user2">
+        <a href="#"><img src="home-pic2.png" alt="User 2"></a>
+        <p>James Andrei Sarno</p>
+    </div>
+</div>
+
+</body>
+</html>
